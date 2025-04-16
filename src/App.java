@@ -1,5 +1,6 @@
 import java.util.Scanner;
 import controllers.MetodosBusqueda;
+import controllers.MetodosBusquedaBinaria;
 import models.Persona;
 
 public class App {
@@ -15,7 +16,13 @@ public class App {
         personas[4] = new Persona(125, "Herta");
         personas[5] = new Persona(126, "Marcelo");
         personas[6] = new Persona(127, "Miguel");
-        MetodosBusqueda metodos = new MetodosBusqueda(personas);
+
+        MetodosBusquedaBinaria mBB = new MetodosBusquedaBinaria(personas);
+
+        mBB.showPersonByName();
+        //mBB.findPersonaBycODE(6);
+
+        /*MetodosBusqueda metodos = new MetodosBusqueda(personas);
 
         Scanner sc = new Scanner(System.in);
         System.out.println("Ingrese (nombre) para buscar por el nombre o (codigo) para buscar por codigo: ");
@@ -27,7 +34,7 @@ public class App {
             metodos.showPerson();
         } else {
             System.out.println("Opción no válida");
-        }
+        }*/
             //App app = new App();
             //app.ejecutar();
     }
